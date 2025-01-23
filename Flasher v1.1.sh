@@ -1,8 +1,6 @@
 #!/bin/bash
-# This is Script 1 on Making MicroPython Easy for ESP32
-# Version 1.0
-
-# Exec definitions
+apt install python3 python3-pip
+pip install esptool
 board-flash-q() {
 echo " "
 echo "----------------------------------------"
@@ -15,7 +13,7 @@ echo "2 - ESP32-S2 (ESP32-S2)"
 echo "3 - ESP32-S3 (ESP32-S3)"
 echo "4 - ESP32-C3 (ESP32-C3)"
 echo "5 - ESP32-C6 (ESP32-C6)"
-echo "6 - ESP8266 No WiFi (ESP8266)"
+echo "6 - ESP8266 (ESP8266)"
 sleep 5
 read -p "Please select your board (1-6)" boardNum
 case "$boardNum" in
