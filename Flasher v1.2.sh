@@ -441,7 +441,3 @@ devicepresentqs
 ;;
 esac
 }
-
-# ref script to not forget: esptool.py --chip <type e.g esp32c6>--port /dev/ttyUSB0 erase_flash
-# ref 2 script: esptool.py --chip <type e.g esp32c6> --port /dev/ttyUSB0 --baud 460800 write_flash -z <dependent. see log at bottom> </path/to/file.bin>
-# log: ESP32 (Generic/WROOM)
