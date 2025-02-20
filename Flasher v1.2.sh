@@ -1,5 +1,4 @@
 #!/bin/bash
-apt install python3 python3-pip
 pip install esptool
 board-flash-q() {
 echo " "
