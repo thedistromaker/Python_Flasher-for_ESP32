@@ -1,5 +1,4 @@
 #!/bin/bash
-pip install esptool
 board-flash-q() {
 echo " "
 echo "----------------------------------------"
