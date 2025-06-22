@@ -1,4 +1,31 @@
 #!/bin/bash
+
+checkforcommands() {
+echo "Checking for commands..."
+if [ ! -e $(command -v wget) ]; then
+echo "No wget detected. Please install it."
+exit 1
+fi
+if [ ! -e $(command -v python3) ]; then
+echo "Python3 not installed. Please install it."
+exit 1
+fi
+read -p "Is pip3 and esptool installed? (y/N) " pipesptoolinstalled
+case $pipesptoolinstalled in
+[Yy])
+echo "OK!"
+board-flash-q
+;;
+[Nn])
+echo "Please install both."
+exit 1
+;;
+*)
+echo "Please answer again."
+checkforcommands
+;;
+esac
+}
 board-flash-q() {
 echo " "
 echo "----------------------------------------"
