@@ -60,6 +60,10 @@ board-flash-c6
 [6]*)
 board-flash-esp8266
 ;;
+*)
+echo "Number not in range."
+exit 1
+;;
 esac
 } 
 
